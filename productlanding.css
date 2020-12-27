@@ -37,15 +37,14 @@ h2 {font-family: 'Dancing Script', cursive; margin: 0; padding-left: 1%; font-si
 h2::before {
   display: block;
   content: " ";
-  margin-top: -20vh;
-  height: 20vh;
+  margin-top: -25vh;
+  height: 25vh;
   visibility: hidden;
   position: relative;
   z-index: -1;
 }
 
 #profile-pic {max-width: 12em; height: auto; float: left; margin: 3% 1% 0 1%;}
-
 
 #section-two {margin: 5% 0;}
 #flex-display {display: flex; width: 100%; flex-wrap: wrap; justify-content: space-evenly;}
@@ -59,7 +58,7 @@ h3 {font-size: 1.4rem; text-align: left; margin: 0; padding: 3%;}
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 15%;
+	padding-top: 22vh;
   left: 0;
   top: 0;
   width: 100%;
@@ -71,19 +70,16 @@ h3 {font-size: 1.4rem; text-align: left; margin: 0; padding: 3%;}
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+	max-height: 70vh;
 }
 
 #caption {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+  width: 100%;
   text-align: center;
+	font-size: 1.25rem;
   color: #ccc;
-  padding: 10px 0;
-  height: 150px;
 }
 
 .modal-content, #caption {
@@ -97,20 +93,13 @@ h3 {font-size: 1.4rem; text-align: left; margin: 0; padding: 3%;}
 }
 
 .close {
-  position: absolute;
-  top: 25%;
-  right: 25%;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: transparent;
+  font-size: 150rem;
+	text-align: center;
+	cursor: pointer;
 }
 
 #section-three {max-width: 80vw; height: auto; margin: auto;}
