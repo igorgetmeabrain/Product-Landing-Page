@@ -2,37 +2,36 @@
 * {border: 1px solid red !important;}
 */
 
-html {box-sizing: border-box; margin: 0; padding: 0;}
+html {box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth;}
 *, *:before, *:after {box-sizing: inherit;}
 
 :root {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 1.1vw;
 	--green-header: hsla(122, 82%, 35%, 0.95);
 	--gray-background: hsla(0, 0%, 13%, 1);
 	--cream-background: hsla(57, 28%, 80%, 0.95);
 	--nav-text: hsla(122, 82%, 35%, 0.95);
 	}
 
-.silver-frame {border: 0.3vw inset silver; border-radius: 1%; background: silver;}
+.silver-frame {border: 3px inset silver; border-radius: 1%; background: silver;}
 .box-shadow {box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 12px 12px rgba(0,0,0,0.75);}
 
 #header {position: fixed; top: 0; left: 0; width: 100%; background-color: var(--cream-background); z-index: 3;}
-#header-img {float: left; max-width: 6%; height: auto; margin: 0.5%; cursor: pointer;}
+#header-img {float: left; max-width: 6%; height: auto; margin: 1% 2%; cursor: pointer;}
 h1 {font-family: 'Dancing Script', cursive; letter-spacing: 0.3rem; margin: 0.5% 0 0 0; padding-left: 8%; font-size: 2.5rem;}
 
-#nav-bar {float: right; display: inline-block; max-width: 50%;}
-a {font-family: 'Dancing Script', cursive; font-size: 2rem; text-decoration: none; color: var(--nav-text); padding: 0 1vw;}
+#nav-bar {float: right; display: inline-block; width: 40%; max-width: 50%; padding: 0.5% 0;}
+a {font-family: 'Dancing Script', cursive; font-size: 2rem; text-decoration: none; color: var(--nav-text); padding: 0 3%;}
 .nav-link {transition: all 0.6s ease 0s;}
-.nav-link:hover {color: orange;}
+.nav-link:hover, .nav-link:focus {color: orange;}
 
 #main {background: var(--cream-background); border-radius: 1%; margin-top: 10%;}
 
 #section-one {font-size: 1.1rem; text-align: justify;}
-#section-one p {padding: 2%;}
+#section-one p {margin-top: -2%; padding: 2%;}
 #section-one strong {font-size: 2rem;}
 
-h2 {font-family: 'Dancing Script', cursive; margin: 0; padding-left: 1%; font-size: 3rem;}
+h2 {font-family: 'Dancing Script', cursive; margin-bottom: 3%; padding-left: 1%; font-size: 3rem;}
 
 h2::before {
   display: block;
@@ -44,14 +43,14 @@ h2::before {
   z-index: -1;
 }
 
-#profile-pic {max-width: 12em; height: auto; float: left; margin: 3% 1% 0 1%;}
+#profile-pic {max-width: 12em; height: auto; float: left; margin: 0 1%;}
 
-#section-two {margin: 5% 0;}
+#section-two {margin: 3% 0;}
 #flex-display {display: flex; width: 100%; flex-wrap: wrap; justify-content: space-evenly;}
 .art-tile {margin-bottom: 3%; cursor: pointer;}
 #section-two img {width: 320px; height: 320px; object-fit: cover; margin: 0;}
 .gallery-images {transition: 0.3s;}
-.gallery-images:hover {opacity: 0.7;}
+.gallery-images:hover, .gallery-images:focus {opacity: 0.7;}
 h3 {font-size: 1.4rem; text-align: left; margin: 0; padding: 3%;}
 
 .modal {
@@ -104,13 +103,14 @@ h3 {font-size: 1.4rem; text-align: left; margin: 0; padding: 3%;}
 
 #section-three {max-width: 80vw; height: auto; margin: auto;}
 .iframe {display: flex; flex-wrap: wrap; justify-content: space-evenly;}
-iframe {width: 33em; height: 33em; margin: 2%; border: 2px solid black; background: black;}
+iframe {width: 27em; height: 27em; margin: 2% 2% 1% 2%; border: 2px solid black; background: black;}
 
 #section-four {width: 60%; margin: auto;}
 #form {background: silver;}
 textarea {width: 95%; resize: none; margin: 3%; background: var(--cream-background);}
 #email-label {font-size: 1.4rem; text-align: left; margin: 0; padding: 1%;}
 #email {width: 40%;
+	margin-bottom: 2%;
   padding: 1% 2%;
   background: var(--cream-background);
 }
@@ -124,12 +124,17 @@ textarea {width: 95%; resize: none; margin: 3%; background: var(--cream-backgrou
   color: var(--cream-background);
 }
 
+#submit:hover, #submit:focus {
+    opacity: 0.7;
+		cursor: pointer;
+}
+
 footer {width: 100%; text-align: center;}
 
 .fa {
-  padding: 1%;
-  font-size: 2rem;
-  width: 4.5%;
+  padding: 1% 0;
+  font-size: 2.25rem;
+  width: 5%;
   border-radius: 50%;
 }
 
@@ -137,11 +142,11 @@ li {display: inline;}
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 0 2% 2% 2%;
+  padding: 0 2% 2% 2%;
 }
 
-.fa:hover {
+.fa:hover, .fa:focus {
     opacity: 0.7;
 }
 
@@ -163,7 +168,6 @@ ul {
 h4 {float: right; font-size: 1.2rem; color: var(--cream-background);}
 
 @media only screen and (max-width: 700px){
-	:root {font-size: 1.5vw;}
 	#profile-pic {max-width: 15em;}
   .modal-content {width: 100%;}
 	iframe {width: 46em; height: 46em;}
